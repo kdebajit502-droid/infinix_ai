@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Infinix AI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/png"
+          href="{{ url_for('static', filename='1.png') }}"
+          width="32"
+          height="32">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <img
+                    src="{{ url_for('static', filename='1.png') }}"
+                    alt="Infinix logo"
+                    width="32"
+                    height="32"
+                >
+            </div>
+
+            <div>
+                <h2>Infinix</h2>
+                <span>AI Teaching Assistant</span>
+            </div>
+
+        </div>
+
+
+        <button class="new-chat" id="newChatButton">
+            + New Chat
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <p>RECENT CHATS</p>
+
+            <div id="recentChats">
+                New conversation
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span>AI Online</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h3>Infinix</h3>
+                <span>AI Teaching Assistant</span>
+            </div>
+
+        </div>
+
+
+        <!-- CHAT -->
+        <div class="chat-container" id="chat">
+
+            <div class="welcome">
+
+                <div class="welcome-icon">
+                    I
+                </div>
+
+                <h1>How can I help you?</h1>
+
+                <p>
+                    Ask me anything. I'll explain it clearly
+                    and help you understand it step by step.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- INPUT -->
+        <div class="input-wrapper">
+
+            <div class="input-box">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Ask Infinix anything..."
+                    rows="1"
+                ></textarea>
+
+                <button id="sendButton" class="send-button">
+                    ↑
+                </button>
+
+            </div>
+
+            <div class="input-note">
+                Infinix can make mistakes. Check important information.
+            </div>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<!-- ===================================== -->
+<!-- EXTERNAL LIBRARIES -->
+<!-- ===================================== -->
+
+<!-- Markdown -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- HTML Sanitization -->
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+
+<!-- Prism Core -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+
+
+<!-- Prism Languages -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+
+
+<!-- ===================================== -->
+<!-- YOUR JAVASCRIPT -->
+<!-- ===================================== -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+</html>
